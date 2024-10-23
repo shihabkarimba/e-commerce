@@ -33,6 +33,28 @@ final themeData = ThemeData(
   textSelectionTheme: const TextSelectionThemeData(
     cursorColor: Colors.white,
   ),
+  tabBarTheme: const TabBarTheme(
+    indicator: ShapeDecoration(
+      shape: StadiumBorder(),
+      color: Color(0xFF5b9ee1),
+    ),
+    unselectedLabelStyle: TextStyle(
+        fontFamily: 'Poppins',
+        fontSize: 14.0,
+        fontWeight: FontWeight.w500,
+        color: Colors.white,
+        height: 1.5),
+    labelStyle: TextStyle(
+        fontFamily: 'Poppins',
+        fontSize: 14.0,
+        fontWeight: FontWeight.w500,
+        color: Colors.white,
+        height: 1.5),
+    dividerColor: Colors.transparent,
+    labelPadding: EdgeInsets.symmetric(vertical: 8),
+    indicatorSize: TabBarIndicatorSize.tab,
+    splashFactory: NoSplash.splashFactory,
+  ),
   inputDecorationTheme: InputDecorationTheme(
     alignLabelWithHint: true,
     enabledBorder: OutlineInputBorder(
