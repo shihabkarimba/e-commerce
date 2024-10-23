@@ -1,5 +1,8 @@
 import 'package:e_commerce_assignment/Presentation/Features/Home/View/home_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../Bloc/Product/product_bloc.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -51,7 +54,10 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      body: const HomeView(),
+      body: BlocProvider(
+        create: (context) => ProductBloc(),
+        child: const HomeView(),
+      ),
     );
   }
 }
