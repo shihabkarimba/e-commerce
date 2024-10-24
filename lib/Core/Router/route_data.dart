@@ -51,6 +51,14 @@ class Routes {
     },
   );
 
+  static final cart = RouteInfo(
+    name: 'cart',
+    path: '/cart',
+    pageBuilder: (context, state) {
+      return const MaterialPage(child: CartPage());
+    },
+  );
+
   static final profile = RouteInfo(
     name: 'profile',
     path: '/profile',
