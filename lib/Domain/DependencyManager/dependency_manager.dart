@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:e_commerce/Domain/Repository/FirebaseAuthRepo/firebase_auth_repo.dart';
+import 'package:e_commerce/Domain/Repository/LocalAuthRepo/local_auth_repo.dart';
+import 'package:e_commerce/Domain/Repository/LocalAuthRepo/local_auth_repo_impl.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get_it/get_it.dart';
-import 'package:e_commerce_assignment/Domain/Repository/FirebaseAuthRepo/firebase_auth_repo.dart';
-import 'package:e_commerce_assignment/Domain/Repository/LocalAuthRepo/local_auth_repo.dart';
-import 'package:e_commerce_assignment/Domain/Repository/LocalAuthRepo/local_auth_repo_impl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../Repository/FirebaseAuthRepo/firebase_auth_repo_impl.dart';

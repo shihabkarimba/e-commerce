@@ -1,5 +1,5 @@
-import 'package:e_commerce_assignment/Core/Constants/Usages/usages.dart';
-import 'package:e_commerce_assignment/Core/Router/route.dart';
+import 'package:e_commerce/Core/Constants/Usages/usages.dart';
+import 'package:e_commerce/Core/Router/route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

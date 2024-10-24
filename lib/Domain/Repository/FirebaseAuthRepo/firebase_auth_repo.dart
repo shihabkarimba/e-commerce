@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:e_commerce_assignment/Models/ErrorResponse/error_response.dart';
-import 'package:e_commerce_assignment/Models/UserModel/user_model.dart';
+import 'package:e_commerce/Models/ErrorResponse/error_response.dart';
+import 'package:e_commerce/Models/UserModel/user_model.dart';
 
 abstract class FirebaseAuthRepository {
   ///sign up user with email and password

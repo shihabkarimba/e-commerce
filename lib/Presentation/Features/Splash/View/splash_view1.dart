@@ -1,4 +1,4 @@
-import 'package:e_commerce_assignment/Presentation/Features/Splash/Widget/ellipse_widget.dart';
+import 'package:e_commerce/Presentation/Features/Splash/Widget/ellipse_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../gen/assets.gen.dart';

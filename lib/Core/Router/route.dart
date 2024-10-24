@@ -1,5 +1,6 @@
-import 'package:e_commerce_assignment/Presentation/Features/Cart/Page/cart_page.dart';
-import 'package:e_commerce_assignment/Presentation/Features/Profile/Page/profile_page.dart';
+import 'package:e_commerce/Presentation/Features/Cart/Page/cart_page.dart';
+import 'package:e_commerce/Presentation/Features/ProductDetails/Page/product_details_page.dart';
+import 'package:e_commerce/Presentation/Features/Profile/Page/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -50,8 +51,12 @@ final router = GoRouter(
               name: Routes.home.name,
               path: Routes.home.path,
               pageBuilder: Routes.home.pageBuilder,
-              routes: const [
-                ///
+              routes: [
+                GoRoute(
+                  name: Routes.productDetails.name,
+                  path: Routes.productDetails.path,
+                  pageBuilder: Routes.productDetails.pageBuilder,
+                ),
               ],
             ),
           ],

@@ -8,11 +8,12 @@ class ProductModel with _$ProductModel {
   const factory ProductModel({
     int? id,
     String? name,
+    String? tag,
     String? image,
     List<String>? gallery,
     String? description,
     double? price,
-    List<double>? availableSizes,
+    List<int>? availableSizes,
     String? symbol,
   }) = _ProductModel;
 

@@ -3,10 +3,10 @@ import 'dart:developer';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get_it/get_it.dart';
-import 'package:e_commerce_assignment/Core/Constants/Database/database_constants.dart';
-import 'package:e_commerce_assignment/Domain/Repository/LocalAuthRepo/local_auth_repo.dart';
-import 'package:e_commerce_assignment/Models/ErrorResponse/error_response.dart';
-import 'package:e_commerce_assignment/Models/UserModel/user_model.dart';
+import 'package:e_commerce/Core/Constants/Database/database_constants.dart';
+import 'package:e_commerce/Domain/Repository/LocalAuthRepo/local_auth_repo.dart';
+import 'package:e_commerce/Models/ErrorResponse/error_response.dart';
+import 'package:e_commerce/Models/UserModel/user_model.dart';
 
 import 'firebase_auth_repo.dart';
 

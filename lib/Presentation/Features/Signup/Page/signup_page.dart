@@ -1,7 +1,7 @@
+import 'package:e_commerce/Bloc/Signup/signup_bloc.dart';
+import 'package:e_commerce/Core/Constants/Usages/usages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:e_commerce_assignment/Bloc/Signup/signup_bloc.dart';
-import 'package:e_commerce_assignment/Core/Constants/Usages/usages.dart';
 
 import '../View/signup_view.dart';
 

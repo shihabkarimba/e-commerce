@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:e_commerce_assignment/Core/Constants/Usages/product_static_data.dart';
+import 'package:e_commerce/Core/Constants/Usages/product_static_data.dart';
 import 'package:equatable/equatable.dart';
 
 import '../../Models/ProductModel/product_model.dart';

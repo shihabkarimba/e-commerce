@@ -10,13 +10,14 @@ _$ProductModelImpl _$$ProductModelImplFromJson(Map<String, dynamic> json) =>
     _$ProductModelImpl(
       id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
+      tag: json['tag'] as String?,
       image: json['image'] as String?,
       gallery:
           (json['gallery'] as List<dynamic>?)?.map((e) => e as String).toList(),
       description: json['description'] as String?,
       price: (json['price'] as num?)?.toDouble(),
       availableSizes: (json['availableSizes'] as List<dynamic>?)
-          ?.map((e) => (e as num).toDouble())
+          ?.map((e) => (e as num).toInt())
           .toList(),
       symbol: json['symbol'] as String?,
     );
@@ -25,6 +26,7 @@ Map<String, dynamic> _$$ProductModelImplToJson(_$ProductModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
+      'tag': instance.tag,
       'image': instance.image,
       'gallery': instance.gallery,
       'description': instance.description,
