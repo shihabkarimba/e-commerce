@@ -1,3 +1,4 @@
+import 'package:e_commerce/Bloc/CartData/cart_data_bloc.dart';
 import 'package:e_commerce/Bloc/Product/product_bloc.dart';
 import 'package:e_commerce/Bloc/UserProfile/user_profile_bloc.dart';
 import 'package:flutter/material.dart';
@@ -24,6 +25,9 @@ class _ScaffoldWIthBottomNavBarState extends State<ScaffoldWIthBottomNavBar> {
         ),
         BlocProvider<ProductBloc>(
           create: (BuildContext context) => ProductBloc(),
+        ),
+        BlocProvider<CartDataBloc>(
+          create: (BuildContext context) => CartDataBloc(),
         )
       ],
       child: Scaffold(

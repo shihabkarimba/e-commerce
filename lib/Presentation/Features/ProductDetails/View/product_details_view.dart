@@ -1,6 +1,8 @@
+import 'package:e_commerce/Bloc/CartData/cart_data_bloc.dart';
 import 'package:e_commerce/Models/ProductModel/product_model.dart';
 import 'package:e_commerce/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ProductDetailsView extends StatefulWidget {
   final ProductModel product;
@@ -14,9 +16,11 @@ class ProductDetailsView extends StatefulWidget {
 }
 
 class _ProductDetailsViewState extends State<ProductDetailsView> {
+  int selectedSize = 0;
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    selectedSize = widget.product.availableSizes?[0] ?? 0;
     return Column(
       children: [
         Assets.img.shoe.image(),
@@ -105,11 +109,20 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                               itemBuilder: (context, index) {
                                 final size =
                                     widget.product.availableSizes?[index];
-                                return CircleAvatar(
-                                  backgroundColor: theme.colorScheme.secondary
-                                      .withOpacity(.2),
-                                  radius: 40,
-                                  child: Text(size.toString()),
+                                return InkWell(
+                                  onTap: () {
+                                    setState(() {
+                                      selectedSize = size ?? 0;
+                                    });
+                                  },
+                                  child: CircleAvatar(
+                                    backgroundColor: selectedSize == size
+                                        ? theme.colorScheme.secondary
+                                        : theme.colorScheme.secondary
+                                            .withOpacity(.2),
+                                    radius: 40,
+                                    child: Text(size.toString()),
+                                  ),
                                 );
                               },
                             ),
@@ -138,7 +151,14 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                         ],
                       ),
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          context.read<CartDataBloc>().add(OnAddItemToCartEvent(
+                                  product: ProductData(
+                                product: widget.product,
+                                selectedSize: selectedSize,
+                                quantity: 1,
+                              )));
+                        },
                         child: const Text('Add to Cart'),
                       ),
                     ],
