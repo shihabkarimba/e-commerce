@@ -18,6 +18,10 @@ class RouteInfo {
   });
 }
 
+class QueryParams {
+  static String id = 'id';
+}
+
 class Routes {
   static final splash = RouteInfo(
     name: 'splash',
@@ -56,6 +60,16 @@ class Routes {
     path: '/cart',
     pageBuilder: (context, state) {
       return const MaterialPage(child: CartPage());
+    },
+  );
+
+  static final productDetails = RouteInfo(
+    name: 'productDetails',
+    path: 'productDetails',
+    pageBuilder: (context, state) {
+      final id =
+          int.tryParse(state.uri.queryParameters[QueryParams.id] ?? '0') ?? 0;
+      return MaterialPage(child: ProductDetailsPage(productId: id));
     },
   );
 

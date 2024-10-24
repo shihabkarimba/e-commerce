@@ -22,11 +22,12 @@ ProductModel _$ProductModelFromJson(Map<String, dynamic> json) {
 mixin _$ProductModel {
   int? get id => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
+  String? get tag => throw _privateConstructorUsedError;
   String? get image => throw _privateConstructorUsedError;
   List<String>? get gallery => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   double? get price => throw _privateConstructorUsedError;
-  List<double>? get availableSizes => throw _privateConstructorUsedError;
+  List<int>? get availableSizes => throw _privateConstructorUsedError;
   String? get symbol => throw _privateConstructorUsedError;
 
   /// Serializes this ProductModel to a JSON map.
@@ -48,11 +49,12 @@ abstract class $ProductModelCopyWith<$Res> {
   $Res call(
       {int? id,
       String? name,
+      String? tag,
       String? image,
       List<String>? gallery,
       String? description,
       double? price,
-      List<double>? availableSizes,
+      List<int>? availableSizes,
       String? symbol});
 }
 
@@ -73,6 +75,7 @@ class _$ProductModelCopyWithImpl<$Res, $Val extends ProductModel>
   $Res call({
     Object? id = freezed,
     Object? name = freezed,
+    Object? tag = freezed,
     Object? image = freezed,
     Object? gallery = freezed,
     Object? description = freezed,
@@ -88,6 +91,10 @@ class _$ProductModelCopyWithImpl<$Res, $Val extends ProductModel>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      tag: freezed == tag
+          ? _value.tag
+          : tag // ignore: cast_nullable_to_non_nullable
               as String?,
       image: freezed == image
           ? _value.image
@@ -108,7 +115,7 @@ class _$ProductModelCopyWithImpl<$Res, $Val extends ProductModel>
       availableSizes: freezed == availableSizes
           ? _value.availableSizes
           : availableSizes // ignore: cast_nullable_to_non_nullable
-              as List<double>?,
+              as List<int>?,
       symbol: freezed == symbol
           ? _value.symbol
           : symbol // ignore: cast_nullable_to_non_nullable
@@ -128,11 +135,12 @@ abstract class _$$ProductModelImplCopyWith<$Res>
   $Res call(
       {int? id,
       String? name,
+      String? tag,
       String? image,
       List<String>? gallery,
       String? description,
       double? price,
-      List<double>? availableSizes,
+      List<int>? availableSizes,
       String? symbol});
 }
 
@@ -151,6 +159,7 @@ class __$$ProductModelImplCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? name = freezed,
+    Object? tag = freezed,
     Object? image = freezed,
     Object? gallery = freezed,
     Object? description = freezed,
@@ -166,6 +175,10 @@ class __$$ProductModelImplCopyWithImpl<$Res>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      tag: freezed == tag
+          ? _value.tag
+          : tag // ignore: cast_nullable_to_non_nullable
               as String?,
       image: freezed == image
           ? _value.image
@@ -186,7 +199,7 @@ class __$$ProductModelImplCopyWithImpl<$Res>
       availableSizes: freezed == availableSizes
           ? _value._availableSizes
           : availableSizes // ignore: cast_nullable_to_non_nullable
-              as List<double>?,
+              as List<int>?,
       symbol: freezed == symbol
           ? _value.symbol
           : symbol // ignore: cast_nullable_to_non_nullable
@@ -201,11 +214,12 @@ class _$ProductModelImpl implements _ProductModel {
   const _$ProductModelImpl(
       {this.id,
       this.name,
+      this.tag,
       this.image,
       final List<String>? gallery,
       this.description,
       this.price,
-      final List<double>? availableSizes,
+      final List<int>? availableSizes,
       this.symbol})
       : _gallery = gallery,
         _availableSizes = availableSizes;
@@ -217,6 +231,8 @@ class _$ProductModelImpl implements _ProductModel {
   final int? id;
   @override
   final String? name;
+  @override
+  final String? tag;
   @override
   final String? image;
   final List<String>? _gallery;
@@ -233,9 +249,9 @@ class _$ProductModelImpl implements _ProductModel {
   final String? description;
   @override
   final double? price;
-  final List<double>? _availableSizes;
+  final List<int>? _availableSizes;
   @override
-  List<double>? get availableSizes {
+  List<int>? get availableSizes {
     final value = _availableSizes;
     if (value == null) return null;
     if (_availableSizes is EqualUnmodifiableListView) return _availableSizes;
@@ -248,7 +264,7 @@ class _$ProductModelImpl implements _ProductModel {
 
   @override
   String toString() {
-    return 'ProductModel(id: $id, name: $name, image: $image, gallery: $gallery, description: $description, price: $price, availableSizes: $availableSizes, symbol: $symbol)';
+    return 'ProductModel(id: $id, name: $name, tag: $tag, image: $image, gallery: $gallery, description: $description, price: $price, availableSizes: $availableSizes, symbol: $symbol)';
   }
 
   @override
@@ -258,6 +274,7 @@ class _$ProductModelImpl implements _ProductModel {
             other is _$ProductModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
+            (identical(other.tag, tag) || other.tag == tag) &&
             (identical(other.image, image) || other.image == image) &&
             const DeepCollectionEquality().equals(other._gallery, _gallery) &&
             (identical(other.description, description) ||
@@ -274,6 +291,7 @@ class _$ProductModelImpl implements _ProductModel {
       runtimeType,
       id,
       name,
+      tag,
       image,
       const DeepCollectionEquality().hash(_gallery),
       description,
@@ -301,11 +319,12 @@ abstract class _ProductModel implements ProductModel {
   const factory _ProductModel(
       {final int? id,
       final String? name,
+      final String? tag,
       final String? image,
       final List<String>? gallery,
       final String? description,
       final double? price,
-      final List<double>? availableSizes,
+      final List<int>? availableSizes,
       final String? symbol}) = _$ProductModelImpl;
 
   factory _ProductModel.fromJson(Map<String, dynamic> json) =
@@ -316,6 +335,8 @@ abstract class _ProductModel implements ProductModel {
   @override
   String? get name;
   @override
+  String? get tag;
+  @override
   String? get image;
   @override
   List<String>? get gallery;
@@ -324,7 +345,7 @@ abstract class _ProductModel implements ProductModel {
   @override
   double? get price;
   @override
-  List<double>? get availableSizes;
+  List<int>? get availableSizes;
   @override
   String? get symbol;
 

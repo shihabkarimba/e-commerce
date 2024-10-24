@@ -1,4 +1,4 @@
-package com.e_commerce_assignment
+package com.e_commerce
 
 import io.flutter.embedding.android.FlutterActivity
 

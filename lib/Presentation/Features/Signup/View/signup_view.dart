@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:e_commerce_assignment/Bloc/Signup/signup_bloc.dart';
-import 'package:e_commerce_assignment/Core/Constants/Validator/validator.dart';
-import 'package:e_commerce_assignment/Core/Router/route.dart';
-import 'package:e_commerce_assignment/Presentation/Shared/Widgets/toast_widget.dart';
+import 'package:e_commerce/Bloc/Signup/signup_bloc.dart';
+import 'package:e_commerce/Core/Constants/Validator/validator.dart';
+import 'package:e_commerce/Core/Router/route.dart';
+import 'package:e_commerce/Presentation/Shared/Widgets/toast_widget.dart';
 
 import '../../../../Core/Constants/Usages/usages.dart';
 

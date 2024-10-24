@@ -1,4 +1,4 @@
-import 'package:e_commerce_assignment/Models/ProductModel/product_model.dart';
+import 'package:e_commerce/Models/ProductModel/product_model.dart';
 
 import '../../../gen/assets.gen.dart';
 
@@ -11,6 +11,7 @@ class ProductStaticData {
       id: 1,
       name: 'Sample1',
       image: Assets.img.shoe.path,
+      tag: 'BEST SELLER',
       availableSizes: [27, 31, 33, 44],
       description: commonDescription,
       gallery: [
@@ -25,6 +26,7 @@ class ProductStaticData {
       id: 2,
       name: 'Sample2',
       image: Assets.img.shoe.path,
+      tag: 'BEST SELLER',
       availableSizes: [33, 34, 36, 44, 55],
       description: commonDescription,
       gallery: [
@@ -38,6 +40,7 @@ class ProductStaticData {
       id: 3,
       name: 'Sample3',
       image: Assets.img.shoe.path,
+      tag: 'BEST SELLER',
       availableSizes: [17, 22, 26, 32, 38, 42],
       description: commonDescription,
       gallery: [
@@ -53,6 +56,7 @@ class ProductStaticData {
       id: 4,
       name: 'Sample4',
       image: Assets.img.shoe.path,
+      tag: 'BEST SELLER',
       availableSizes: [19, 22, 27, 29, 34],
       description: commonDescription,
       gallery: [
