@@ -31,10 +31,17 @@ class _ScaffoldWIthBottomNavBarState extends State<ScaffoldWIthBottomNavBar> {
           destinations: const [
             NavigationDestination(
               icon: Icon(
-                Icons.home,
+                Icons.home_work_rounded,
                 color: Colors.white54,
               ),
               label: 'home',
+            ),
+            NavigationDestination(
+              icon: Icon(
+                Icons.shopping_cart,
+                color: Colors.white54,
+              ),
+              label: 'cart',
             ),
             NavigationDestination(
               icon: Icon(
