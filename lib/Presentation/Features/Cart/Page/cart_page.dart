@@ -1,3 +1,4 @@
+import 'package:e_commerce/Presentation/Features/Cart/View/cart_view.dart';
 import 'package:flutter/material.dart';
 
 class CartPage extends StatefulWidget {
@@ -11,7 +12,11 @@ class _CartPageState extends State<CartPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text('Cart')),
+      appBar: AppBar(
+        title: const Text('My Cart'),
+        centerTitle: true,
+      ),
+      body: const CartView(),
     );
   }
 }

@@ -29,6 +29,9 @@ class CartDataBloc extends Bloc<CartDataEvent, CartDataState> {
           ...productList,
         ],
       ));
+      showToast(
+        msg: 'Item added to cart',
+      );
     } else {
       showToast(
         msg: 'The Item already added into cart',
@@ -52,19 +55,18 @@ class CartDataBloc extends Bloc<CartDataEvent, CartDataState> {
     OnIncrementQuantityEvent event,
     Emitter<CartDataState> emit,
   ) {
-    final item = state.productList.firstWhere((e) => e.product?.id == event.id);
-    final updatedItem = item.copyWith(
-      quantity: (item.quantity ?? 0) + 1,
-    );
-    final productListWithoutSelectedItem = state.productList
-        .where((e) => e.product?.id != item.product?.id)
-        .toList();
+    final updatedProductList = state.productList.map((e) {
+      if (e.product?.id == event.id) {
+        return e.copyWith(
+          quantity: (e.quantity ?? 0) + 1,
+        );
+      }
+      return e;
+    }).toList();
+
     emit(
       CartDataState(
-        productList: [
-          updatedItem,
-          ...productListWithoutSelectedItem,
-        ],
+        productList: updatedProductList,
       ),
     );
   }

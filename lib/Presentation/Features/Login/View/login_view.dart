@@ -58,7 +58,7 @@ class _LoginViewState extends State<LoginView> {
                               ),
                     ),
                   ),
-                  SizedBox(height: 50),
+                  const SizedBox(height: 50),
                   TextFormField(
                     controller: _email,
                     keyboardType: TextInputType.emailAddress,

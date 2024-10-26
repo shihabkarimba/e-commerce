@@ -16,6 +16,11 @@ class ProfileView extends StatefulWidget {
 
 class _ProfileViewState extends State<ProfileView> {
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Column(
       children: [
@@ -26,7 +31,6 @@ class _ProfileViewState extends State<ProfileView> {
             minWidth: double.maxFinite,
             minHeight: 100,
           ),
-          decoration: BoxDecoration(color: Colors.yellow.shade50),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -36,8 +40,14 @@ class _ProfileViewState extends State<ProfileView> {
                     UserProfileLoadedState(userModel: final userData) => Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('${userData.name}'),
-                          Text('${userData.email}'),
+                          Text(
+                            '${userData.name}',
+                            style: Theme.of(context).textTheme.titleLarge,
+                          ),
+                          Text(
+                            '${userData.email}',
+                            style: Theme.of(context).textTheme.titleLarge,
+                          ),
                         ],
                       ),
                     UserProfileInitialState() ||
@@ -59,7 +69,10 @@ class _ProfileViewState extends State<ProfileView> {
                       actionText: 'Logout',
                       title: 'Warning');
                 },
-                icon: const Icon(Icons.logout),
+                icon: const Icon(
+                  Icons.logout,
+                  color: Colors.white,
+                ),
               ),
             ],
           ),
