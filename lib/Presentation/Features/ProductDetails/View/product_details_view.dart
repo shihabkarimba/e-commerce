@@ -18,9 +18,15 @@ class ProductDetailsView extends StatefulWidget {
 class _ProductDetailsViewState extends State<ProductDetailsView> {
   int selectedSize = 0;
   @override
+  void initState() {
+    super.initState();
+    selectedSize = widget.product.availableSizes?[0] ?? 0;
+  }
+
+  @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    selectedSize = widget.product.availableSizes?[0] ?? 0;
+
     return Column(
       children: [
         Assets.img.shoe.image(),
@@ -121,7 +127,12 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                                         : theme.colorScheme.secondary
                                             .withOpacity(.2),
                                     radius: 40,
-                                    child: Text(size.toString()),
+                                    child: Text(
+                                      size.toString(),
+                                      style: selectedSize == size
+                                          ? theme.textTheme.titleLarge
+                                          : null,
+                                    ),
                                   ),
                                 );
                               },

@@ -40,21 +40,21 @@ class _ScaffoldWIthBottomNavBarState extends State<ScaffoldWIthBottomNavBar> {
             NavigationDestination(
               icon: Icon(
                 Icons.home_work_rounded,
-                color: Colors.white54,
+                color: Colors.white,
               ),
               label: 'home',
             ),
             NavigationDestination(
               icon: Icon(
                 Icons.shopping_cart,
-                color: Colors.white54,
+                color: Colors.white,
               ),
               label: 'cart',
             ),
             NavigationDestination(
               icon: Icon(
                 Icons.person,
-                color: Colors.white54,
+                color: Colors.white,
               ),
               label: 'settings',
             ),

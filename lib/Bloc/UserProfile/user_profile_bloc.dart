@@ -19,6 +19,7 @@ class UserProfileBloc extends Bloc<UserProfileEvent, UserProfileState> {
     emit(UserProfileLoadingState());
 
     try {
+      print('-' * 100);
       final res = await _auth.getUserProfile();
       if (res != null) {
         emit(UserProfileLoadedState(userModel: res));
